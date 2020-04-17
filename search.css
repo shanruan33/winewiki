@@ -1,0 +1,188 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#search-page {
+    display: block;
+}
+
+#search-body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+}
+
+#filter {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    background-color: white;
+    padding-top: 1.5rem;
+}
+
+#searchResult, .result {
+    grid-column: 2 / 5;
+    grid-row: 1 / 5;
+    background-color: #D2DBDD;
+    padding-left: 1.8rem;
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 400px;
+}
+
+#filter form {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+#filter form select {
+    max-width: 200px;
+}
+
+.bottle, .back {
+    width: 240px;
+    height: 330px;
+    background-color: white;
+    border-radius: 10px;
+    /* position: relative; */
+}
+
+#bottleImg {
+    width: 110px;
+    height: 260px;
+    object-fit: scale-down;
+    margin-top: 3px;
+    margin-left: 60px;
+    margin-right: auto;
+}
+
+.bottle label {
+    display: inline-block;
+    align-content: center;
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    font-family: Arial;
+    margin-top: 0;
+    padding-top: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* #liked {
+    width:20px;
+    height:20px;
+    position: absolute;
+    right:10px;
+    top:10px;
+    opacity:0.5;
+} */
+
+#likeIcon {
+    /* border-width: 2px;
+    border-style: solid;
+    border-color:powderblue; */
+    position: relative;
+    top: 320px;
+    float: right;
+    margin-right: 30px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 4px;
+    background-color: powderblue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+#numLike {
+    position: relative;
+    top: 320px;
+    float: left;
+    margin-left: 30px;
+    padding: 5px 10px 5px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+/* clickable flip card css */
+
+/* div {
+    width: 100%;
+    height: 100%;
+  } */
+
+/* .container {
+    
+    width: 240px;
+    height: 340px;
+    perspective: 1000px;
+  }
+  
+  .card {
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .bottle, .back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+  }
+  
+
+  
+  .back {
+    
+    transform: rotateY(180deg);
+  } */
+
+/*added vendor prefixes*/
+
+.container {
+    /* margin: 20px; */
+    width: 240px;
+    height: 340px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.card {
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    -o-transition: transform 2s;
+    transition: transform 2s;
+    transition: transform 2s, -webkit-transform 2s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.bottle, .back {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
